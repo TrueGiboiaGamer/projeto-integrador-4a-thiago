@@ -27,6 +27,8 @@ loadChildren: () => import('./listaexc1/listaexc1-module').then(m => m.Listaexc1
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+
+
 })
 export class AppRoutingModule { }
 
