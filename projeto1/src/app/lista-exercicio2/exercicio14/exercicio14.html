@@ -1,1 +1,17 @@
-<p>exercicio14 works!</p>
+<h2>Situação do usuário</h2>
+
+@if (usuarioLogado) {
+  <p>Usuário autenticado</p>
+}
+@else {
+  <p>Acesso não autorizado</p>
+}
+
+<button (click)="alternarLogin()">
+  @if (usuarioLogado) {
+    Sair
+  }
+  @else {
+    Entrar
+  }
+</button>

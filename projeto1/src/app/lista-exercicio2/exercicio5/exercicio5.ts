@@ -4,6 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-exercicio5',
   standalone: false,
   templateUrl: './exercicio5.html',
-  styleUrl: './exercicio5.css',
+  styleUrl: './exercicio5.css'
 })
-export class Exercicio5 {}
+export class Exercicio5 {
+
+  nomes = ['João', 'Maria', 'Carlos', 'Ana', 'Pedro'];
+
+}

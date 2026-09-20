@@ -4,6 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-exercicio2',
   standalone: false,
   templateUrl: './exercicio2.html',
-  styleUrl: './exercicio2.css',
+  styleUrl: './exercicio2.css'
 })
-export class Exercicio2 {}
+export class Exercicio2 {
+
+  usuarioLogado: boolean = false;
+
+  alternarLogin() {
+    this.usuarioLogado = !this.usuarioLogado;
+  }
+}

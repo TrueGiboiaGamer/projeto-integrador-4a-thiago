@@ -1,1 +1,51 @@
-<p>exercicio13 works!</p>
+<h2>Lista de tarefas</h2>
+
+<p>Total de tarefas: {{ tarefas.length }}</p>
+
+<p>
+  Concluídas:
+  {{ tarefas.filter(t => t.concluida).length }}
+</p>
+
+<p>
+  Pendentes:
+  {{ tarefas.filter(t => !t.concluida).length }}
+</p>
+
+<hr>
+
+@for (tarefa of tarefas; track tarefa.id) {
+
+  <div
+    [ngClass]="{
+      'prioridade-baixa': tarefa.prioridade == 'baixa',
+      'prioridade-media': tarefa.prioridade == 'media',
+      'prioridade-alta': tarefa.prioridade == 'alta',
+      'concluida': tarefa.concluida
+    }">
+
+    <h3>{{ tarefa.titulo }}</h3>
+
+    <p>Responsável: {{ tarefa.responsavel }}</p>
+
+    <p>Prioridade: {{ tarefa.prioridade }}</p>
+
+    @if (tarefa.concluida) {
+      <p>Concluída</p>
+    }
+    @else {
+      <p>Pendente</p>
+    }
+
+    <button (click)="alterarSituacao(tarefa)">
+      Alterar situação
+    </button>
+
+  </div>
+
+}
+@empty {
+
+  <p>Não existem tarefas.</p>
+
+}

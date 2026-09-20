@@ -14,6 +14,7 @@ import { Exercicio11 } from './exercicio11/exercicio11';
 import { Exercicio12 } from './exercicio12/exercicio12';
 import { Exercicio13 } from './exercicio13/exercicio13';
 import { Exercicio14 } from './exercicio14/exercicio14';
+
 const routes: Routes = [
 
 {path: 'exercicio1', component: Exercicio1},
@@ -35,6 +36,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  
 })
 export class ListaExercicio2RoutingModule {}
 

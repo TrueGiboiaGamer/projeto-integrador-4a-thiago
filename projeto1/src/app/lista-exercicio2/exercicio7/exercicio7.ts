@@ -4,6 +4,17 @@ import { Component } from '@angular/core';
   selector: 'app-exercicio7',
   standalone: false,
   templateUrl: './exercicio7.html',
-  styleUrl: './exercicio7.css',
+  styleUrl: './exercicio7.css'
 })
-export class Exercicio7 {}
+export class Exercicio7 {
+
+  disciplinas = [
+    'Programação',
+    'Banco de Dados',
+    'Engenharia de Software',
+    'Redes de Computadores',
+    'Sistemas Operacionais',
+    'Desenvolvimento Web'
+  ];
+
+}

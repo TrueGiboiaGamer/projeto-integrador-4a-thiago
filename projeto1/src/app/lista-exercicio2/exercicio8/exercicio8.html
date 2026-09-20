@@ -1,1 +1,25 @@
-<p>exercicio8 works!</p>
+<h2>Lista de produtos</h2>
+
+@for (produto of produtos; track produto.id) {
+
+  <h3>{{ $index + 1 }} - {{ produto.nome }}</h3>
+
+  <p>ID: {{ produto.id }}</p>
+
+  <p>Preço: {{ produto.preco | currency:'BRL' }}</p>
+
+  <p>Quantidade disponível: {{ produto.quantidade }}</p>
+
+  <p>
+    Valor total em estoque:
+    {{ produto.preco * produto.quantidade | currency:'BRL' }}
+  </p>
+
+  <hr>
+
+}
+@empty {
+
+  <p>Nenhum produto cadastrado.</p>
+
+}

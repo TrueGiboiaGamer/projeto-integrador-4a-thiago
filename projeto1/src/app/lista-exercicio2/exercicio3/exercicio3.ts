@@ -4,6 +4,19 @@ import { Component } from '@angular/core';
   selector: 'app-exercicio3',
   standalone: false,
   templateUrl: './exercicio3.html',
-  styleUrl: './exercicio3.css',
+  styleUrl: './exercicio3.css'
 })
-export class Exercicio3 {}
+export class Exercicio3 {
+
+  idade: number = 18;
+
+  aumentarIdade() {
+    this.idade++;
+  }
+
+  diminuirIdade() {
+    if (this.idade > 0) {
+      this.idade--;
+    }
+  }
+}

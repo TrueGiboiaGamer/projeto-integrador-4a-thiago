@@ -1,1 +1,19 @@
-<p>exercicio3 works!</p>
+<h2>Verificação de idade</h2>
+
+<p>Idade: {{ idade }}</p>
+
+<button (click)="diminuirIdade()">Diminuir</button>
+<button (click)="aumentarIdade()">Aumentar</button>
+
+@if (idade < 12) {
+  <p>Criança</p>
+}
+@else if (idade < 18) {
+  <p>Adolescente</p>
+}
+@else if (idade < 60) {
+  <p>Adulto</p>
+}
+@else {
+  <p>Idoso</p>
+}

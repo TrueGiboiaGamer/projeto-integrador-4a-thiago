@@ -1,1 +1,29 @@
-<p>exercicio10 works!</p>
+<h2>Promoção e estilo dinâmico</h2>
+
+<div *ngFor="let produto of produtos">
+
+  <h3>{{ produto.nome }}</h3>
+
+  <p
+    [ngStyle]="{
+      'font-weight': produto.promocao ? 'bold' : 'normal',
+      'color': produto.promocao ? 'red' : 'black'
+    }">
+
+    Preço: {{ produto.preco | currency:'BRL' }}
+
+  </p>
+
+  @if (produto.promocao) {
+    <p class="promocao">
+      Produto em promoção
+    </p>
+  }
+
+  <button (click)="alternarPromocao(produto)">
+    {{ produto.promocao ? 'Desativar promoção' : 'Ativar promoção' }}
+  </button>
+
+  <hr>
+
+</div>
