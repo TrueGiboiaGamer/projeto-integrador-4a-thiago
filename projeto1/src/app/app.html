@@ -1,8 +1,8 @@
 <app-cabecalho>[loja]='cabecalholoja'</app-cabecalho>
 <h1>Página Principal</h1>
 
-<app-card-produto>[nome]='NomeProduto1' [disponivel]='Disponivel'</app-card-produto>
-<app-card-produto>[nome]='NomeProduto2' [disponivel]='Disponivel'</app-card-produto>
-<app-card-produto>[nome]='NomeProduto3' [disponivel]='Disponivel'</app-card-produto>
+<app-card-produto [nome]="NomeProduto1" [preco]="precoProduto1" [disponivel]="disponivelProduto1"></app-card-produto>
+<app-card-produto [nome]="NomeProduto2" [preco]="precoProduto2" [disponivel]="disponivelProduto2"></app-card-produto>
+<app-card-produto [nome]="NomeProduto3" [preco]="precoProduto3" [disponivel]="disponivelProduto3"></app-card-produto>
 
 <router-outlet />
